@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+		<meta name="renderer" content="webkit">
+		<title>组织架构管理
+		</title>
+		<!--[if lt IE 8]>
+   <script>
+       location.href = 'page/browse.html';
+   </script>
+    <![endif]-->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/global.css" rel="stylesheet">
+		<link rel="stylesheet" href="font/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tree/tree.min.css" />
+		<link href="https://cdn.staticfile.org/font-awesome/4.4.0/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+		<script src="js/jquery.min1.13.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="js/app.js"></script>
+		<script src="plugin/tree/jstree.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    	table tr td{
+    		color: #999;
+    	}
+    </style>
+	</head>
+
+	<body>
+		<header id="header">
+		</header>
+
+		<div id="nav">
+
+		</div>
+		<div id="mytree">
+			<div class="ys">
+				<span>知识分类</span>
+			</div>
+			<div class="treecontent">
+				<!--大树开始-->
+				<div id="jstree1">
+					<ul>
+						<li class="jstree-open">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+						<li class="jstree-open">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+						<li class="jstree-open">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+						<li class="jstree-closed">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+						<li class="jstree-closed">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+						<li class="jstree-closed">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+						<li class="jstree-closed">光电光学仪器
+							<ul>
+								<li data-jstree='{"type":"js"}'>仪器结构设计</li>
+								<li data-jstree='{"type":"js"}'>光学镜头系统设计</li>
+								<li data-jstree='{"type":"js"}'>军用光学仪器</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--大树结束-->
+			</div>
+		</div>
+		<div id="content" style="margin-left: 480px;">
+			<div id="app">
+				<!--<div class="yjname">
+					用户管理
+				</div>-->
+				<div class="anniu t_right m_t_30">
+					<form class="form-inline">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" class="form-control" id="search" placeholder="Amount">
+								<div class="input-group-addon">搜索</div>
+							</div>
+						</div>
+							<a class="btn btn-default" href="#" role="button"><i class="icon iconfont icon-jiahao"></i>新建</a>
+					<a class="btn btn-default" href="#" role="button"><i class="icon iconfont icon-shanchu"></i>删除</a>
+					</form>
+				
+				</div>
+				<table class="table table-hover m_t_20">
+					<thead>
+						<tr>
+							<td>
+								<div class="checkbox">
+									<label>
+      <input type="checkbox">
+    </label>
+								</div>
+							</td>
+							<td>名称</td>
+							<td>分类</td>
+							<td>创建人</td>
+							<td>上传时间</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="item in items">
+							<td>
+								<div class="checkbox">
+									<label>
+      <input type="checkbox"> 
+    </label>
+								</div>
+							</td>
+							<td>
+								<a href="">{{ item.name }}</a>
+							</td>
+							<td> {{ item.fenlei }}</td>
+							<td>{{ item.create }}</td>
+							<td>{{ item.uptime }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="row">
+					<div class="col-md-4 text-left">
+						<p class="m_t_30">1/9页 共68条记录</p>
+					</div>
+					<div class="col-md-8 text-right">
+						<!--　翻页开始-->
+						<nav aria-label="">
+							<ul class="pagination">
+								<li class="disabled">
+									<a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+								</li>
+								<li class="active">
+									<a href="#">1 <span class="sr-only">(current)</span></a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li class="disabled">
+									<a href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+								</li>
+							</ul>
+						</nav>
+						<!--翻页结束-->
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<footer id="footer">
+		</footer>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/global.js"></script>
+
+		<style>
+			.jstree-open>.jstree-anchor>.fa-folder:before {
+				content: "\f07c"
+			}
+			
+			.jstree-default .jstree-icon.none {
+				width: 0
+			}
+		</style>
+
+		<script>
+			$(document).ready(function() {
+				$("#jstree1").jstree({
+					"core": {
+						"check_callback": true
+					},
+					"plugins": ["types", "dnd"],
+					"types": {
+						"default": {
+							"icon": "fa fa-folder"
+						},
+						"html": {
+							"icon": "fa fa-file-code-o"
+						},
+						"svg": {
+							"icon": "fa fa-file-picture-o"
+						},
+						"css": {
+							"icon": "fa fa-file-code-o"
+						},
+						"img": {
+							"icon": "fa fa-file-image-o"
+						},
+						"js": {
+							"icon": "fa fa-file-text-o"
+						}
+					}
+				});
+				$("#using_json").jstree({
+					"core": {
+						"data": ["Empty Folder", {
+							"text": "Resources",
+							"state": {
+								"opened": true
+							},
+							"children": [{
+								"text": "css",
+								"children": [{
+									"text": "animate.css",
+									"icon": "none"
+								}, {
+									"text": "bootstrap.css",
+									"icon": "none"
+								}, {
+									"text": "main.css",
+									"icon": "none"
+								}, {
+									"text": "style.css",
+									"icon": "none"
+								}],
+								"state": {
+									"opened": true
+								}
+							}, {
+								"text": "js",
+								"children": [{
+									"text": "bootstrap.js",
+									"icon": "none"
+								}, {
+									"text": "hplus.min.js",
+									"icon": "none"
+								}, {
+									"text": "jquery.min.js",
+									"icon": "none"
+								}, {
+									"text": "jsTree.min.js",
+									"icon": "none"
+								}, {
+									"text": "custom.min.js",
+									"icon": "none"
+								}],
+								"state": {
+									"opened": true
+								}
+							}, {
+								"text": "html",
+								"children": [{
+									"text": "layout.html",
+									"icon": "none"
+								}, {
+									"text": "navigation.html",
+									"icon": "none"
+								}, {
+									"text": "navbar.html",
+									"icon": "none"
+								}, {
+									"text": "footer.html",
+									"icon": "none"
+								}, {
+									"text": "sidebar.html",
+									"icon": "none"
+								}],
+								"state": {
+									"opened": true
+								}
+							}]
+						}, "Fonts", "Images", "Scripts", "Templates", ]
+					}
+				})
+			});
+			
+			$(function(){
+				$("#search").focus(function(){
+					$(this).css("width","500px");
+				}).blur(function(){
+					$(this).css("width","172px");
+				})
+			})
+		</script>
+
+		<script>
+
+			
+			var app = new Vue({
+				el: '#app',
+				data: {
+					items: commonData.teamList,
+					deFlag: false,
+					curProduct: "",
+			        
+				},
+				methods: {
+					aa:function(){
+						alert(111);
+					},
+					delConfirm: function(item) {
+						//this.deFlag = true;
+
+						curProduct = this.item;
+					},
+					delProduct: function() {
+						var index = this.items.indexOf(this.curProduct);
+						this.items.splice(index, 1);
+						$('#myModal').modal('toggle');
+					},
+					expand:function(){
+						
+//						$("#exampleInputAmount")
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

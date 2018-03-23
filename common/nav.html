@@ -1,0 +1,60 @@
+<div class="mynav" id="mynavs">
+	<ul>
+		<li>
+			<a href="index.html"><i class="icon iconfont icon-yonghuguanli"></i>用户管理</a>
+			<i class="iconfont icon icon-xiangxia1"></i>
+			<ul>
+				<li>
+					<a href="ziliao.html">个人资料</a>
+				</li>
+				<li>
+					<a href="mima.html">密码修改</a>
+				</li>
+				<li>
+					<a href="wodekongjian.html">我的空间</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="jueseguanli.html"><i class="icon iconfont icon-msnui-role-manage"></i>角色管理</a>
+		</li>
+		<li>
+			<a href="zuzhijiagou.html"><i class="icon iconfont icon-zuzhijiagou"></i>组织架构管理</a>
+		</li>
+		<li>
+			<a href="caidanguanli.html"><i class="icon iconfont icon-caidan-shi"></i>菜单管理</a>
+		</li>
+		<li>
+			<a href="shujuzidian.html"><i class="icon iconfont icon-shuju"></i>数据字典</a>
+		</li>
+		<li>
+			<a href="rizhiguanli.html"><i class="icon iconfont icon-63"></i>日志管理</a>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript" language="javascript">
+		$(function() {
+			$(".mynav li").click(function() {
+				$(this).find("ul").toggle();
+			});
+		})
+
+	var nav = document.getElementById("mynavs");
+	var links = nav.getElementsByTagName("li");
+	var lilen = nav.getElementsByTagName("a");
+	var currenturl = document.location.href;
+
+	var last = 0;
+	for(var i = 0; i < links.length; i++) {
+		var linkurl = lilen[i].getAttribute("href");
+		
+		console.log(currenturl.indexOf(linkurl) );
+		if(currenturl.indexOf(linkurl) != -1) {
+			last = i;
+		}
+	}
+	
+	
+	lilen[last].className = "active";
+</script>

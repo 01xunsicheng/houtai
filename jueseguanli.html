@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+		<meta name="renderer" content="webkit">
+		<title>角色管理</title>
+		<!--[if lt IE 8]>
+   <script>
+       location.href = 'page/browse.html';
+   </script>
+    <![endif]-->
+		<!-- Bootstrap -->
+		<link href="css/global.css" rel="stylesheet">
+		<link rel="stylesheet" href="font/iconfont.css">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css" />
+
+		<script src="js/jquery.min1.13.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="js/app.js"></script>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-datetimepicker.min.js"></script>
+		<script src="js/bootstrap-datetimepicker.fr.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<header id="header">
+		</header>
+
+		<div id="nav">
+
+		</div>
+
+		<div id="content">
+			<div id="app">
+				<div class="yjname">
+					角色管理
+				</div>
+
+				<div class="ejname">
+					基本信息
+				</div>
+				<div class="container-fluid">
+					<form class="form-horizontal m_t_25 myform">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-sm-3 control-label">账号：</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="accout" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-3 control-label">密码：</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" id="password" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-sm-3 control-label">姓名：</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="name" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-3 control-label">确认密码：</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" id="confirmpassword" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-3 control-label">状态：</label>
+									<div class="col-sm-9">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-3 control-label">组织架构：</label>
+									<div class="col-sm-9">
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<!--时间开始-->
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-3 control-label">时间：</label>
+									<div class="col-sm-4">
+										<div class="input-group date form_date col-md-12" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+											<input class="form-control" size="16" type="text" value="" readonly>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+										</div>
+										<!--	<input type="hidden" id="dtp_input2" value="" /><br/>-->
+									</div>
+									<div class="col-sm-1">
+										<p class="m_t_5">一</p>
+									</div>
+									<div class="col-sm-4">
+										<div class="input-group date form_date col-md-12" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+											<input class="form-control" size="16" type="text" value="" readonly>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+										</div>
+										<!--	<input type="hidden" id="dtp_input2" value="" /><br/>-->
+									</div>
+								</div>
+							</div>
+
+							<!--时间结束-->
+							<div class="col-md-9">
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-2 control-label">备注：</label>
+									<div class="col-sm-10">
+										<textarea class="form-control" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="inputPassword" class="col-sm-3 control-label"></label>
+								<div class="col-sm-9 t_left" style="padding-left: 5px;">
+									<a href="#" class="btn btn-primary " role="button">保存</a>
+									<a href="#" class="btn btn-default m_l_15 " role="button">取消</a>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+		<footer id="footer">
+		</footer>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/global.js"></script>
+		<script type="text/javascript">
+			$('.form_datetime').datetimepicker({
+				//language:  'fr',
+				weekStart: 1,
+				todayBtn: 1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				forceParse: 0,
+				showMeridian: 1
+			});
+			$('.form_date').datetimepicker({
+				language: 'fr',
+				weekStart: 1,
+				todayBtn: 1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0
+			});
+			$('.form_time').datetimepicker({
+				language: 'fr',
+				weekStart: 1,
+				todayBtn: 1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 1,
+				minView: 0,
+				maxView: 1,
+				forceParse: 0
+			});
+		</script>
+
+		<script>
+			var app = new Vue({
+				el: '#app2',
+				data: {
+					items: commonData.tableListDatas,
+					deFlag: false,
+					curProduct: ""
+				},
+				methods: {
+					delConfirm: function(item) {
+						//this.deFlag = true;
+
+						curProduct = this.item;
+					},
+					delProduct: function() {
+						var index = this.items.indexOf(this.curProduct);
+						this.items.splice(index, 1);
+						$('#myModal').modal('toggle');
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

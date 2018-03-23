@@ -1,0 +1,385 @@
+@import "mystyle.css";
+//website base color
+@color: #fff; // 白色
+@color1: #4092b3; // 导航蓝
+@color2: #36789e; //导航深蓝
+@color3: #e3f3fc; // hover浅蓝色
+@color4: #f7f7f8; //按钮背景色
+@color5: #f5f5f5; //导航背景色
+@color333: #333; //一级标题黑
+@color666: #666; //主体黑
+@color999: #999; //时间类色号
+* {
+    list-style: none;
+}
+
+.colorl{
+    color: @color2 !important;
+}
+.size24 {
+    font-size: 24px; //一级标题 粗字体  一级黑
+}
+
+.size20 {
+    font-size: 20px !important; //二级标题 常规字体   一级黑 
+}
+
+.size18 {
+    font-size: 18px; //二级标题 常规字体   一级黑 
+}
+
+.size16 {
+    font-size: 16px; //二级标题 常规字体   一级黑 
+}
+
+.size14 {
+    font-size: 14px; //主要内容 常规字体
+}
+
+.size12 {
+    font-size: 12px;
+}
+
+.green {
+    background: @color1;
+}
+
+.white {
+    background: @color;
+}
+
+.txt-white {
+    color: @color;
+}
+
+.txt-3c {
+    color: @color4;
+    word-wrap: break-word;
+}
+
+//common css
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+.opacity(@opcity: 0.9) {
+    /* older safari/Chrome browsers */
+    -webkit-opacity: @opcity;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: @opcity;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: @opcity;
+    /* IE9 + etc...modern browsers */
+    opacity: @opcity;
+    /* IE 4-9 */
+    filter: alpha(opacity=(@opcity*100));
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid @color1;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid @color;
+    border-bottom: 10px solid transparent;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+.logo {
+    max-height: 100%;
+}
+
+.thumbnail {
+    border-color: #fff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    img {
+        width: 30%;
+        margin-top: 2em;
+    }
+    .info {
+        font-size: 1em;
+        height: 2em;
+    }
+}
+
+.thumbnail_add {
+    .thumbnail {
+        img {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+}
+
+.ys2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 2em !important;
+}
+
+.ys2info {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: .6em !important;
+    color: #666;
+}
+
+.ys2_xian {
+    background: rgb(2, 178, 181);
+    width: 40px;
+    margin: 2em auto 0;
+    height: 3px;
+}
+
+.mymedia {
+    background: #f2f2f2 !important;
+    .media-body {
+        padding: 3em;
+    }
+}
+
+//.btn-primary {
+//  background-color: rgb(2, 178, 181) !important;
+//  border-color: rgb(2, 178, 181) !important;
+//}
+.btn-primary {
+    background-color: @color2 !important;
+    border-color: @color2 !important;
+    padding: 5px 15px;
+}
+.btn-default{
+      padding: 5px 15px;
+}
+
+//导航部分
+.header {
+    height: 60px;
+    line-height: 60px;
+    background: @color1;
+    position: relative;
+    z-index: 3000;
+    color: @color;
+    a {
+        color: @color;
+    }
+    .logo {
+        background: @color2;
+        width: 240px;
+        height: 60px;
+        text-align: center;
+    }
+}
+
+.mynav {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 240px;
+    padding-top: 70px;
+    text-align: left;
+    background: @color5;
+    color: @color666;
+    a {
+        color: @color666;
+        i {
+            margin-right: 20px;
+            margin-left: 17px;
+            color: @color333;
+        }
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        line-height: 52px;
+        border-bottom: 1px solid #e5e5e5;
+        border-top: 1px solid #e5e5e5;
+        margin-top: -1px;
+        position: relative;
+        .icon-xiangxia1 {
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+        }
+        li {
+            border-bottom: 0;
+            line-height: 40px;
+            background: #e5e5e5;
+           a{
+                padding-left: 50px;
+           }
+            .active{
+                  background: #e5e5e5;
+                color: @color2;
+            }
+        }
+    }
+    .active {
+        background: @color1;
+        display: inline-block;
+        width: 100%;
+          color: @color;
+          i{
+                color: @color;
+          }
+    }
+}
+
+#content {
+    margin-left: 240px;
+    padding: 0 20px;
+}
+#mytree{
+    background: #f5f5f5;
+        position: absolute;
+    height: 100%;
+    left: 240px;
+    top: 0;
+    width: 239px;
+    padding-top: 70px;
+    text-align: left;
+    background: @color5;
+    border-left: 1px solid #e5e5e5;
+    overflow-y:scroll;
+    .treecontent{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .ys{
+         margin-left: 20px;
+        border-bottom: 1px solid #e6e3e4;
+       font-size: 16px;
+        color: #333233;
+        line-height: 50px;
+        span{
+            width: 80px;
+            display: inline-block;
+              border-bottom: 2px solid @color2;
+        }
+    }
+}
+table {
+    .btn {
+        display: inline-block;
+        padding: 0 !important;
+        margin: 0 !important;
+        &:hover {
+            background: none;
+        }
+    }
+    line-height:40px;
+    thead {
+        td {
+            font-weight: bold;
+        }
+    }
+}
+
+.modal {
+    top: 50%;
+    margin-top: -150px;
+}
+
+.yjname {
+    color: @color333;
+    font-size: 26px;
+    margin-top: 23px;
+    margin-bottom: 30px;
+}
+.ejname{
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 18px;
+    line-height: 50px;
+}
+.myform{
+    .control-label{
+        text-align: left;
+        color: #5d5f5f;
+        font-size: 14px;
+    }
+}
+
+//reset
+a,
+a:hover {
+    outline: none;
+    text-decoration: none !important;
+}
+
+.btn-default {
+    background: @color4;
+    border-color: @color4;
+    color: @color999;
+    i {
+        margin-right: 7px;
+        color: #5d5f5f;
+    }
+}
+
+.checkbox,
+.radio {
+    margin: 0;
+}
+.input-group-addon{
+    cursor: pointer;
+}
+.dropdown-menu{
+    right: 0 !important;
+    left: auto;
+    top: 30px;
+}
+
+//footer
+.footer{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    line-height: 40px;
+    background: #f2f2f2;
+    z-index: -1;
+    p{
+        margin: 0;
+    }
+}
+//登录页面
+.login{
+    margin-top:10%;
+    width: 500px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+left: -120px;
+border: 1px solid #ccc;
+padding: 40px 30px;
+.rounded-corners (@radius: 5px);
+-webkit-box-shadow: 1px 1px 3px #ccc;
+-moz-box-shadow: 1px 1px 3px #ccc;
+box-shadow: 1px 1px 3px #ccc;
+.loname{
+    font-size: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid @color2;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
