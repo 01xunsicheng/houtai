@@ -315,4 +315,8 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.datetimepicker {
+  width: 210px;
+  margin-top: 55px;
+}
 /*# sourceMappingURL=global.css.map */
