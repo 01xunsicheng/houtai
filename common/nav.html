@@ -31,6 +31,7 @@
 			<a href="rizhiguanli.html"><i class="icon iconfont icon-63"></i>日志管理</a>
 		</li>
 	</ul>
+
 </div>
 
 <script type="text/javascript" language="javascript">
@@ -48,8 +49,6 @@
 	var last = 0;
 	for(var i = 0; i < links.length; i++) {
 		var linkurl = lilen[i].getAttribute("href");
-		
-		console.log(currenturl.indexOf(linkurl) );
 		if(currenturl.indexOf(linkurl) != -1) {
 			last = i;
 		}
