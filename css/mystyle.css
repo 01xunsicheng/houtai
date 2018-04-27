@@ -280,4 +280,81 @@ a:hover {
 	-webkit-box-orient: vertical
 }
 
+/*icon图标*/
+
+.icon {
+	display: inline-block;
+	background: url(../images/icon1.png) no-repeat;
+	vertical-align: middle;
+}
+
+.icon1 {
+	background-position: -20px -14px;
+	width: 18px;
+	height: 16px;
+}
+
+.icon2 {
+	background-position: -20px -54px;
+	width: 18px;
+	height: 18px;
+}
+
+.icon3 {
+	background-position:-20px -89px;
+	width: 17px;
+	height: 18px;
+}
+
+.icon4 {
+	background-position: -20px -124px;
+	width: 18px;
+	height: 18px;
+}
+
+
+/*点*/
+
+.icon5 {
+	background-position: -20px -159px;
+	width: 18px;
+	height: 16px;
+}
+
+.icon6 {
+	background-position: -21px -204px;
+	width: 16px;
+	height: 18px;
+}
+
+.icon7 {
+	background-position: -21px -241px;
+	width: 16px;
+	height: 16px;
+}
+
+.icon8 {
+	background-position: -20px -273px;
+	width: 18px;
+	height: 18px;
+}
+
+.icon9 {
+	background-position: -20px -322px;
+	width: 18px;
+	height: 18px;
+}
+
+/*.icon10 {
+	background-position: -198px -73px;
+	width: 24px;
+	height: 24px;
+}
+
+.icon11 {
+	background-position: -242px -73px;
+	width: 23px;
+	height: 24px;
+}*/
+
 
